@@ -4,29 +4,106 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
     <style>
         *{
             box-sizing:border-box;
         }
 
-        header{position:absolute;background-color:white;height:90px;width:100%;}.intro{position:relative;left:20%;
-            width:150px;bottom:30%;margin-right:300px;}
+        body{margin:0;background-color:darkgray;}
+
+        header{
+            height:90px;
+            width:100%;
+            align-items:center;
+            background-color:white;
+        }
+
+        .intro{
+            font-family:'Nanum Gothic',sans-serif;
+            font-size:14px;
+            margin-left:250px;
+            width:150px;
+            margin-top:-38px;
+        }
             
         .logout{
-            position:relative;
-            left:80%;
-            bottom:50%;
+            width:150px;
+            margin-left:1100px;
+            margin-top:-28px;
+
         }
 
         .lo_button{
             background-color:rgb(199, 52, 52);
+            padding:5px 10px;
+            padding-top:1.7px;
+            border-radius:10px;
+            border:none;
+            color:white;
+            font-family:'Nanum Gothic',sans-serif;
+            font-size:20px;
+            transition: all 0.3s;
+            cursor:pointer;
         }
 
-        img{
+        .lo_button span{
+            transition:0.3s;
+            position:relative;
+            display:inline-block;
+            padding-right:5px;
+        }
+        /*.lo_button span:after{content:' \26BF';}*/
+
+        .lo_button span:after{
+            content:' \26BF';
+        }
+
+        .lo_button:hover span{
+            padding-right:22px;
+            padding-top:1.8px;
+            display:inline-block;
+        }
+
+        .lo_button:hover span:after{
+            opacity:1;
+            right:0;
+            content:' \1F6AA';
+            position:absolute;
+        }
+
+        .lo_button:active{
+            transform:translateY(2px);
+        }
+
+        .logo{
+            position:relative;
             width:15%;
             padding:5px 12px;
-            /*border:1px solid black;*/
+            padding-top:12px;
+        }
+
+        .menu_bar{
+            display:inline-flex;
+            background-color:skyblue;
+            width:100%;
+            justify-content:center;
+        }
+
+        .menu_bar a{
+            color:rgb(150, 110, 140);
+            text-decoration:none;
+            padding:14px 30px;
+            font-family:'Nanum Gothic',sans-serif;
+            font-weight:bold;
+            font-size:18px;
+        }
+
+        .menu_bar a:hover{
+            color:white;
+            background-color:darkslategray;
         }
 
         .rows{
@@ -35,36 +112,83 @@
         }
 
         .data{
-            flex:30%;
-            background-color:darkgray;
+            flex:25%;
+            background-color:rgb(88,88,88);
+            padding:10px;
+            border-right:10px solid darkgray;
+            font-family:'Nanum Gothic',sans-serif;
+            color:whitesmoke;
+        }
+
+        .data h2{
+            font-family:'Nanum Gothic',sans-serif;
+            font-size:20px;
             padding:10px;
         }
 
+        p.title{
+            padding-left:10px;
+            font-size:14px;
+        }
+
+        p.input{
+            padding-left:20px;
+            font-size:12px;
+        }
+
         .main_dash{
-            flex:70%;
-            background-color:white;
+            flex:75%;
+            background-color:whitesmoke;
+            padding:10px;
+            border-right:10px solid darkgray;
+            font-family:'Nanum Gothic',sans-serif;
+        }
+
+        .main_dash h2{
+            font-family:'Nanum Gothic',sans-serif;
+            font-size:25px;
             padding:10px;
         }
 
     </style>
+    <title>Dashboard</title>
 </head>
 
 <body>
     <header>
-        <span>
-            <img src='https://i.postimg.cc/jdSQdFBL/Logo-PTI-trans.png' alt='PTI' />
-        </span>
+        <img class='logo' src='https://i.postimg.cc/jdSQdFBL/Logo-PTI-trans.png' alt='PTI' />
         <span>
             <div class='intro'>Hi, User123456!</div>
         </span>
         <span>
             <div class='logout'>
-                <input class='lo_button' type='button' name='logout' value='Logout'>
+                <button class='lo_button' name='logout'><span>Logout</span></button>
             </div>
         </span>
     </header>
 
-    <div style='height:2000px;background-color:olivedrab;'></div>
+    <div class='menu_bar'>
+        <a href='/'>Dashboard</a>
+        <a href='#'>Activity Report</a>
+        <a href='#'>Make Agenda</a>
+    </div>
+
+    <div class='rows'>
+        <div class='data'>
+            <h2>Data Pengguna</h2>
+            <p class='title'>Username:</p>
+            <p class='input'>User123456</p>
+            <br>
+            <p class='title'>Name:</p>
+            <p class='input'>D. Rosikin</p>
+            <br>
+            <p class='title'>Role:</p>
+            <p class='input'>sales engineer</p>
+        </div>
+        <div class='main_dash'>
+            <h2>Summary</h2>
+        </div>
+    </div>
 
 </body>
 </html>

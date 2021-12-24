@@ -14,4 +14,4 @@
 ## Thu - Fri, 23/12/'21 - 24/12/'21
 1) Improved page responsiveness for big screen.
 
-2) **The page development is on halt. Focusing on the application infrastructure (back-end side).**
+**2) The page development is on halt. Focusing on the application infrastructure (back-end side).**

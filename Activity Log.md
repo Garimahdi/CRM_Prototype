@@ -10,3 +10,8 @@
 1) Dashboard mockup design is almost completed with progress of 70%. The header (with its content), navigation menu, and the main part of the dashboard templates are set.
 
 2) Look up for some fresh idea on how to build a CRM system.
+
+## Thu - Fri, 23/12/'21 - 24/12/'21
+1) Improved page responsiveness for big screen.
+
+2) **The page development is on halt. Focusing on the application infrastructure (back-end side).**
